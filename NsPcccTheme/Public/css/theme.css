@@ -1,22 +1,75 @@
 /**
  * PCCC Theme for NexoPOS
  * -----------------------
- * Brand colors: blue #1D2474 / red #ED1B30.
+ * Brand colors: navy #16193C / maroon #75272F.
+ *
+ * NexoPOS's own source (light/_dashboard.css) confirms the page
+ * background comes from these exact IDs, compiled from `bg-surface`:
+ *   #main-container, #page-container, #dashboard-body
+ * Overriding the --color-surface variable alone won't work because
+ * Tailwind v4 bakes @apply into static compiled CSS at build time,
+ * so we target the real IDs directly instead.
  */
 
 :root {
-  --pccc-primary: #1D2474;      /* PCCC blue */
-  --pccc-primary-dark: #12174d; /* darker shade of PCCC blue, for hover states */
-  --pccc-accent: #ED1B30;       /* PCCC red */
+  --pccc-primary: #16193C;      /* PCCC navy */
+  --pccc-primary-dark: #0e1029; /* darker navy, for hover states */
+  --pccc-accent: #75272F;       /* PCCC maroon */
   --pccc-text-on-primary: #FFFFFF;
 }
 
-/* Top bar / header */
-.ns-box {
-  border-color: var(--pccc-primary) !important;
+/* Full dashboard background — confirmed real IDs from NexoPOS source */
+#main-container,
+#page-container,
+#dashboard-body {
+  background-color: var(--pccc-primary) !important;
 }
 
-.ns-box .ns-box-header,
+/* Sidebar (already dark by default, aligning it to the exact brand navy) */
+#dashboard-aside,
+#dashboard-aside > div,
+#dashboard-aside .ns-scrollbar {
+  background-color: var(--pccc-primary) !important;
+}
+
+/* Readable text on the new dark backgrounds */
+#main-container,
+#page-container,
+#dashboard-body {
+  color: var(--pccc-text-on-primary) !important;
+}
+
+#main-container .text-fontcolor-soft,
+#page-container .text-fontcolor-soft,
+#dashboard-body .text-fontcolor-soft {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.page-inner-header h3,
+.page-inner-header p {
+  color: var(--pccc-text-on-primary) !important;
+}
+
+/* Card widgets keep their own light background, so force their text back to dark */
+.ns-box:not(.card-widget),
+#ns-orders-chart,
+#ns-best-customers,
+#ns-orders-summary,
+#ns-profile,
+#ns-best-cashiers {
+  color: #1f2937 !important;
+}
+
+.ns-box:not(.card-widget) .text-fontcolor-soft,
+#ns-orders-chart .text-fontcolor-soft,
+#ns-best-customers .text-fontcolor-soft,
+#ns-orders-summary .text-fontcolor-soft,
+#ns-profile .text-fontcolor-soft,
+#ns-best-cashiers .text-fontcolor-soft {
+  color: #6b7280 !important;
+}
+
+/* Top bar / header (the actual top nav bar, not widget headers) */
 .dashboard-header,
 .ns-topbar {
   background-color: var(--pccc-primary) !important;
@@ -39,7 +92,7 @@ button[type="submit"]:hover,
 
 /* Crud table */
 #crud-table .ns-table-row:hover {
-  background-color: rgba(29, 36, 116, 0.06) !important;
+  background-color: rgba(22, 25, 60, 0.06) !important;
 }
 
 .ns-crud-input:focus {
@@ -49,17 +102,11 @@ button[type="submit"]:hover,
 
 /* Side menu active state */
 .ns-menu-wrapper .active,
-.ns-menu-wrapper .router-link-active {
+.ns-menu-wrapper .router-link-active,
+.ns-aside-menu.toggled {
   background-color: var(--pccc-accent) !important;
   color: var(--pccc-text-on-primary) !important;
 }
 
-/*
- * If you'd rather work in Sass and match NexoPOS's own dark-mode
- * variable system, create Resources/assets/sass/_variables.scss in this
- * module, override the same variable names NexoPOS uses internally, add
- * a package.json + vite/webpack config to compile it, and point the
- * <link> in theme-injector.blade.php at the compiled output instead.
- * The plain-CSS approach above needs no build step and is enough for
- * a color-scheme-only change.
- */
+/* Widget header titles left at NexoPOS's default dark color, matching
+   the default light theme's own ns-box-header background/text pairing. */
