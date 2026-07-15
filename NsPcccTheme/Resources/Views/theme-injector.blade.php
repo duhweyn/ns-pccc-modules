@@ -1,1 +1,1 @@
-<link rel="stylesheet" href="{{ asset('modules/NsPcccTheme/css/theme.css') }}">
+<link rel="stylesheet" href="{{ asset('modules/nspccctheme/css/theme.css') }}">
