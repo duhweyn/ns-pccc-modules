@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<module>
+    <namespace>NsPcccDashboardFix</namespace>
+    <version>1.0.0</version>
+    <author>Dwayne</author>
+    <name>PCCC Dashboard Fix</name>
+    <description>
+        <locale lang="en">Fixes the dashboard "Income" and "Expenses" cards showing identical totals by excluding auto-generated double-entry reflection transactions from the report calculation.</locale>
+    </description>
+</module>

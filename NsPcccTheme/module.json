@@ -1,9 +1,0 @@
-{
-    "name": "PCCC Theme & Dashboard Fix",
-    "namespace": "NsPcccTheme",
-    "version": "1.0.0",
-    "author": "Dwayne",
-    "description": "Adds a PCCC-branded color theme to the NexoPOS dashboard and fixes the Income/Expenses cards showing identical values.",
-    "core-version": ">=4.0.0",
-    "requires": []
-}

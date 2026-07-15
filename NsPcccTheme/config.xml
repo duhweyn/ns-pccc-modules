@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<module>
+    <namespace>NsPcccTheme</namespace>
+    <version>1.0.0</version>
+    <author>Dwayne</author>
+    <name>PCCC Theme</name>
+    <description>
+        <locale lang="en">Adds a PCCC-branded color theme (blue #1D2474 / red #ED1B30) to the NexoPOS dashboard.</locale>
+    </description>
+</module>
