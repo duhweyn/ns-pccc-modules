@@ -1,0 +1,65 @@
+/**
+ * PCCC Theme for NexoPOS
+ * -----------------------
+ * Brand colors: blue #1D2474 / red #ED1B30.
+ */
+
+:root {
+  --pccc-primary: #1D2474;      /* PCCC blue */
+  --pccc-primary-dark: #12174d; /* darker shade of PCCC blue, for hover states */
+  --pccc-accent: #ED1B30;       /* PCCC red */
+  --pccc-text-on-primary: #FFFFFF;
+}
+
+/* Top bar / header */
+.ns-box {
+  border-color: var(--pccc-primary) !important;
+}
+
+.ns-box .ns-box-header,
+.dashboard-header,
+.ns-topbar {
+  background-color: var(--pccc-primary) !important;
+  color: var(--pccc-text-on-primary) !important;
+}
+
+/* Primary buttons and action elements */
+.ns-action-button,
+button[type="submit"],
+.btn-primary {
+  background-color: var(--pccc-primary) !important;
+  border-color: var(--pccc-primary) !important;
+}
+
+.ns-action-button:hover,
+button[type="submit"]:hover,
+.btn-primary:hover {
+  background-color: var(--pccc-primary-dark) !important;
+}
+
+/* Crud table */
+#crud-table .ns-table-row:hover {
+  background-color: rgba(29, 36, 116, 0.06) !important;
+}
+
+.ns-crud-input:focus {
+  border-color: var(--pccc-accent) !important;
+  box-shadow: 0 0 0 1px var(--pccc-accent) !important;
+}
+
+/* Side menu active state */
+.ns-menu-wrapper .active,
+.ns-menu-wrapper .router-link-active {
+  background-color: var(--pccc-accent) !important;
+  color: var(--pccc-text-on-primary) !important;
+}
+
+/*
+ * If you'd rather work in Sass and match NexoPOS's own dark-mode
+ * variable system, create Resources/assets/sass/_variables.scss in this
+ * module, override the same variable names NexoPOS uses internally, add
+ * a package.json + vite/webpack config to compile it, and point the
+ * <link> in theme-injector.blade.php at the compiled output instead.
+ * The plain-CSS approach above needs no build step and is enough for
+ * a color-scheme-only change.
+ */

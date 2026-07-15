@@ -1,0 +1,10 @@
+{
+    "name": "pccc/ns-pccc-theme",
+    "description": "PCCC theme and dashboard fix module for NexoPOS",
+    "type": "nexopos-module",
+    "autoload": {
+        "psr-4": {
+            "Modules\\NsPcccTheme\\": ""
+        }
+    }
+}

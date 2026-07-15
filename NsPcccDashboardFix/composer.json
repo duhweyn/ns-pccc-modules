@@ -1,0 +1,10 @@
+{
+    "name": "pccc/ns-pccc-dashboard-fix",
+    "description": "Fixes NexoPOS dashboard Income/Expenses cards showing identical totals",
+    "type": "nexopos-module",
+    "autoload": {
+        "psr-4": {
+            "Modules\\NsPcccDashboardFix\\": ""
+        }
+    }
+}

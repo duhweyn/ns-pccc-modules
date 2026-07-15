@@ -1,0 +1,9 @@
+{
+    "name": "PCCC Dashboard Fix",
+    "namespace": "NsPcccDashboardFix",
+    "version": "1.0.0",
+    "author": "Dwayne",
+    "description": "Fixes the dashboard 'Income' and 'Expenses' cards showing identical totals by excluding auto-generated double-entry reflection transactions from the report calculation.",
+    "core-version": ">=6.0.0",
+    "requires": []
+}
