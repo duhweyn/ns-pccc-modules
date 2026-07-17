@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>Receipt Customization</name>
+    <namespace>ReceiptCustomization</namespace>
+    <version>1.0.0</version>
+    <author>You</author>
+    <description>Custom receipt/invoice layout, vehicle info fields, and POS data capture for service orders.</description>
+    <providers>
+        <provider>ReceiptCustomization/Providers/ReceiptCustomizationServiceProvider.php</provider>
+    </providers>
+</module>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>Hide Menus</name>
+    <namespace>HideMenus</namespace>
+    <version>1.0.0</version>
+    <author>You</author>
+    <description>Hides non-essential dashboard sidebar menus, modifies necessary functions while modifying the code directly as little as possible.</description>
+    <providers>
+        <provider>HideMenus/Providers/HideMenusServiceProvider.php</provider>
+    </providers>
+</module>
