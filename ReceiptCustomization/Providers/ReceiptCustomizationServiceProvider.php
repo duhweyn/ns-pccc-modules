@@ -31,17 +31,14 @@ class ReceiptCustomizationServiceProvider extends ServiceProvider
                 'vehicle_make',
                 'vehicle_model',
                 'vehicle_model_no',
-                'vehicle_color',
                 'vehicle_chassis_no',
                 'prod_date',
                 'current_mileage',
                 'stock_no',
                 'terms',
-                'representative',
                 'customer_telephone',
                 'customer_mobile',
                 'customer_fax',
-                'selling_dealer',
             ]);
         });
 

@@ -44,8 +44,6 @@
     <input type="text" id="vif_vehicle_model">
     <label>Model No.</label>
     <input type="text" id="vif_vehicle_model_no">
-    <label>Color</label>
-    <input type="text" id="vif_vehicle_color">
     <label>Chassis No.</label>
     <input type="text" id="vif_vehicle_chassis_no">
     <label>Prod. Date</label>
@@ -60,18 +58,12 @@
     <input type="text" id="vif_terms">
 
     <h4>Customer Contact</h4>
-    <label>Representative</label>
-    <input type="text" id="vif_representative">
     <label>Telephone</label>
     <input type="text" id="vif_customer_telephone">
     <label>Mobile (Customer No.)</label>
     <input type="text" id="vif_customer_mobile">
     <label>Fax</label>
     <input type="text" id="vif_customer_fax">
-
-    <h4>Dealer</h4>
-    <label>Selling Dealer</label>
-    <input type="text" id="vif_selling_dealer">
 </div>
 
 <script>
@@ -85,9 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fieldIds = [
         'reference_no', 'plate_no', 'vehicle_year', 'vehicle_make', 'vehicle_model',
-        'vehicle_model_no', 'vehicle_color', 'vehicle_chassis_no', 'prod_date',
-        'current_mileage', 'stock_no', 'terms', 'representative',
-        'customer_telephone', 'customer_mobile', 'customer_fax', 'selling_dealer'
+        'vehicle_model_no', 'vehicle_chassis_no', 'prod_date',
+        'current_mileage', 'stock_no', 'terms',
+        'customer_telephone', 'customer_mobile', 'customer_fax'
     ];
 
     // Populate the order object right before it's sent to the backend

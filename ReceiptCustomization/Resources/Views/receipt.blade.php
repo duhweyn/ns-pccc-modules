@@ -6,8 +6,21 @@ use Illuminate\Support\Facades\View;
 $prefered_price     =   $order->settings?->where( 'key', 'ns_pos_prefered_price' )->first()?->value;
 $pos_vat            =   $order->settings?->where( 'key', 'ns_pos_vat' )->first()?->value;
 ?>
+<style>
+    @media print {
+        .ns-receipt-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .shadow-lg {
+            box-shadow: none !important;
+        }
+    }
+</style>
 <div class="w-full h-full">
-    <div class="w-full md:w-1/2 lg:w-1/3 shadow-lg bg-white p-2 mx-auto">
+    <div class="w-full md:w-1/2 lg:w-1/3 shadow-lg bg-white p-2 mx-auto" style="padding-bottom:200px;">
 
         @include( 'ReceiptCustomization::header_section' )
 
@@ -150,8 +163,11 @@ $pos_vat            =   $order->settings?->where( 'key', 'ns_pos_vat' )->first()
             </div>
         </div>
 
-        @include( 'ReceiptCustomization::acknowledgement_section' )
-
     </div>
+
+    <div class="w-full md:w-1/2 lg:w-1/3 mx-auto ns-receipt-footer" style="background:white;">
+        @include( 'ReceiptCustomization::acknowledgement_section' )
+    </div>
+
 </div>
 @includeWhen( request()->query( 'autoprint' ) === 'true', '/pages/dashboard/orders/templates/_autoprint' )
